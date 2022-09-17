@@ -1,11 +1,13 @@
+import sys
+
 def main():
     # Create loop to allow user to continue jokes when selected
     counter1 = 0
     counter2 = 0
     while True:
         # Get input to direct user to another joke or to quit
-        choice = input("ENTER HERE >>> ")
-        if choice == '\\0':
+        choice = sys.stdin.read(1)
+        if choice == '\0':
             break
 
         if choice == '0':
@@ -18,7 +20,7 @@ def main():
             print('one', counter1)
             continue
 
-        elif choice == '\\n':
+        elif choice == '\n':
             counter1 = 0
             counter2 += 1
             print('newline', counter2)
