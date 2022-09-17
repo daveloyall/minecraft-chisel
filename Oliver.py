@@ -7,7 +7,7 @@ def main():
     while True:
         # Get input to direct user to another joke or to quit
         choice = sys.stdin.read(1)
-        if choice == '\0':
+        if choice == '':
             break
 
         if choice == '0':
